@@ -1,0 +1,62 @@
+***Strategy***
+Car transmission & engine behaviour can change at runtime
+
+***Factory***
+Cars are created in a factory, based on model name supplied
+
+***Observer***
+Cars are spawned onto the GameMap which may have observers
+In this case we have a generic display that shows how many cars are active in the game
+
+***Decorator***
+A decorator framework has been defined to create a package of car modifications
+There are concrete car modification garages and concrete modifications (such as alloys, etc) which are all types
+of the car modification abstraction
+A cars modification type can be set in a strategy like manner
+
+***Adapter***
+A series of experimental engines are available from another manufacturer
+These have been adapted to our IEngineBehavior and are available to be used in car object as an extension
+of the previously implemented Strategy pattern
+NOTE: Object adapter - no class adapter in Java as no multiple inheritance
+
+***Template***
+Different levels of drivers
+Template method defines their actions (turn on, drive car, brake car, turn off)
+Drive and Brake are abstract as each driver performs them differently
+Turn on and turn off never change
+
+***State***
+Each car has three states: On, Off and Accelerating
+A car in the Off state can move to the On state
+Once the car is in the On state it may Accelerate or go to the Off state
+In the Accelerating state it may brake and return to the On state
+
+***Composite***
+GameItemComposite - for creating a tree of game objects
+Cars and Drivers modified to extend GameComponent -> they are each a game component
+
+            GameItemComposite
+ ActiveItemsComposite    AvailableItemsComposite
+Cars    Drivers             Cars    Drivers
+
+
+---Code---
+Strategy - DONE
+Composite - DONE
+Factory - DONE
+State - DONE
+Template - DONE
+Decorator - DONE
+Adapter - DONE
+Observer - DONE
+
+---Write Up---
+Strategy - DONE
+Composite - DONE
+Factory - DONE
+State - DIAGRAMS
+Template - DIAGRAMS
+Decorator - DONE
+Adapter - DONE
+Observer - DONE
